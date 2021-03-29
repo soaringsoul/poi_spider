@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Tasks SYSTEM "Tasks-6.0.dtd">
+<!-- eric tasks file for project poi_spider -->
+<!-- Saved: 2021-03-09, 18:46:50 -->
+<Tasks version="6.0">
+  <ProjectScanFilter></ProjectScanFilter>
+  <Task priority="1" completed="False" type="2" uid="{8fd8055b-0615-4026-9cdf-0f0255c7bf54}">
+    <Summary>WARNING: Any manual changes made to this file will be lost when pyuic5 is</Summary>
+    <Description></Description>
+    <Created>2021-03-09, 18:46:47</Created>
+    <Resource>
+      <Filename>Ui_main.py</Filename>
+      <Linenumber>7</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="2" uid="{97ffd472-c44a-4652-bde8-c2b52883f476}">
+    <Summary>WARNING: Any manual changes made to this file will be lost when pyuic5 is</Summary>
+    <Description></Description>
+    <Created>2021-03-09, 18:46:47</Created>
+    <Resource>
+      <Filename>Ui_settings.py</Filename>
+      <Linenumber>7</Linenumber>
+    </Resource>
+  </Task>
+</Tasks>

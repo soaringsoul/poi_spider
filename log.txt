@@ -1,0 +1,44 @@
+2021-03-09 18:55:33 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "C:\Users\soari\OneDrive\myGitHubProjects\easypoi\poi_spider\spiders\web_api_spider.py", line 91, in start_requests
+    self.Q.put(log_info)
+  File "<string>", line 2, in put
+  File "D:\Python\Python37\lib\multiprocessing\managers.py", line 818, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "D:\Python\Python37\lib\multiprocessing\connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "D:\Python\Python37\lib\multiprocessing\connection.py", line 280, in _send_bytes
+    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
+BrokenPipeError: [WinError 232] 管道正在被关闭。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python37\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "C:\Users\soari\OneDrive\myGitHubProjects\easypoi\poi_spider\spiders\web_api_spider.py", line 115, in start_requests
+    self.Q.put(log_info)
+  File "<string>", line 2, in put
+  File "D:\Python\Python37\lib\multiprocessing\managers.py", line 818, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "D:\Python\Python37\lib\multiprocessing\connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "D:\Python\Python37\lib\multiprocessing\connection.py", line 280, in _send_bytes
+    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
+BrokenPipeError: [WinError 232] 管道正在被关闭。
+2021-03-09 18:55:34 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method WebApiCrawler.close of <WebApiCrawler 'bd_map_spider' at 0x17bcb00bd08>>
+Traceback (most recent call last):
+  File "D:\Python\Python37\lib\site-packages\scrapy\utils\defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "D:\Python\Python37\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\soari\OneDrive\myGitHubProjects\easypoi\poi_spider\spiders\web_api_spider.py", line 191, in close
+    spider.Q.put('采集结束!\n结束原因：%s' % reason)
+  File "<string>", line 2, in put
+  File "D:\Python\Python37\lib\multiprocessing\managers.py", line 818, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "D:\Python\Python37\lib\multiprocessing\connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "D:\Python\Python37\lib\multiprocessing\connection.py", line 280, in _send_bytes
+    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
+BrokenPipeError: [WinError 232] 管道正在被关闭。

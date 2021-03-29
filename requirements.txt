@@ -1,0 +1,12 @@
+pandas
+requests
+Scrapy
+Shapely
+pyqt5==5.15.3
+PyQtWebEngine==5.15.3
+pymysql
+sqlalchemy
+openpyxl
+pyinstaller
+pypinyin
+xlrd==1.2.0

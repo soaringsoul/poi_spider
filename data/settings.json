@@ -1,0 +1,8 @@
+{
+  "latest_version": 2.4,
+  "released_url": "https://mp.weixin.qq.com/s/VU9DBMXZVAN2IFyvH1KaNA",
+  "released_doc":"https://mp.weixin.qq.com/s/VU9DBMXZVAN2IFyvH1KaNA",
+  "help_url": "https://mp.weixin.qq.com/s/DB3ePDiRcgEgViKWxCfINg",
+  "details":"1 在v2.3版本上优化设置项布局\n 2 解决部分采集过程中出现的bug\n3 优化异常处理机制，部分区域采集失败时不会中断采集流程",
+  "about_me_url": "https://www.zhihu.com/people/yywh"
+}

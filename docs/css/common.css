@@ -1,0 +1,1663 @@
+/**********  所有页面都要共用的样式  **********/
+/*自定义基础通用样式*/
+body{
+    background: #f8f8f8;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 300;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+    font-weight: 300;
+}
+a:visited{
+    text-decoration: none;
+}
+a:focus{
+    outline: none;
+    text-decoration: none;
+}
+/*所有按钮加渐变动画*/
+.btn{
+    -webkit-transition: all 0.225s ease-in-out;
+    -moz-transition: all 0.225s ease-in-out;
+    -o-transition: all 0.225s ease-in-out;
+    transition: all 0.225s ease-in-out;
+}
+/*所有按钮加渐变动画*/
+
+/*幽灵按钮*/
+.btn-outline-inverse{
+    color: #fff;
+    background: transparent;
+    border-color: #fff;
+}
+.btn-outline-inverse:hover{
+    color: #0ba1e4;
+    text-shadow: none;
+    background-color: #fff;    
+}
+
+.btn-outline-blue{
+    color: #0ba1e4;
+    background: transparent;
+    border-color: #0ba1e4;
+}
+.btn-outline-blue:hover{
+    color: #fff;
+    text-shadow: none;
+    background-color: #0ba1e4;    
+}
+/*幽灵按钮*/
+
+/*标题下方的短下划线*/
+.line{
+    border-top: 1px solid #0ba1e4;
+    width: 30px;
+}
+.line-big{
+    margin: 30px auto 26px;
+    border-width: 2px;
+    width:80px;
+}
+
+/*标题下方的短下划线*/
+
+/*复写引用样式*/
+blockquote {
+    padding-right: 0;
+    padding-bottom: 0;
+    background:#f9f9f9;
+    color: #919191;
+    font-size: 14px;
+    background-image: url("../images/icons/quote-left.png")/*tpa=http://www.clantrip.com/static/images/icons/quote-left.png*/;
+    background-position: top left;
+    background-repeat: no-repeat;
+    text-indent: 2em;
+}
+blockquote .quote-content{
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-image: url("../images/icons/quote-right.png")/*tpa=http://www.clantrip.com/static/images/icons/quote-right.png*/;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+/*复写引用样式*/
+
+/*自定义基础通用样式 */
+
+/*所有页面共享的样式如导航,页脚等 */
+/*手机超小屏幕下的单独样式 xs < 768px */
+@media (max-width: 767px){
+    /*全部-导航*/
+    body{
+        padding-top: 0;/*移动端若固定顶部导航的话高度为52px*/
+        padding-bottom: 55px;
+    }
+    #header .navbar{/*移动端导航不固定顶部*/
+        position: relative !important;
+    }
+    #header .navbar{
+        padding-bottom: 0;
+    }
+    /*全部-导航*/
+    /*全部-页脚*/
+    #footer .footer-wechat p{
+        text-align: left !important;
+    }
+    /*全部-页脚*/
+    /*全部-返回顶部*/
+    #clan-slider{
+        bottom:55px !important;
+    }
+    #clan-slider ul li a{
+        background-color: rgba(255,255,255,0.9) !important;
+        border-color:  transparent !important;
+        border-radius: 50% !important;
+    }
+    #clan-slider #slider-goTop{
+        background-position: -92px 0 !important;
+    }
+    #clan-slider #slider-goTop:hover{
+        background-position: 0 0 !important;
+    }
+    /*全部-返回顶部*/
+}
+/*手机超小屏幕下的单独样式 xs < 768px */
+
+/*大于手机屏幕时的样式 sm >= 768px */
+@media (min-width: 768px){
+    body{
+        padding-top: 82px;/*顶部固定导航条的空间*/
+    }
+    /*全部-导航*/
+    #header .navbar{
+        border-radius: 0;
+        padding: 15px 0;
+    }
+    #header .navbar-nav>li>a{
+        padding: 15px 0;
+    }
+    /*全部-导航*/
+}
+/*大于手机屏幕时的样式 sm >= 768px */
+
+/*平板小屏幕样式 768px <= sm < 992px */
+@media (min-width: 768px) and (max-width: 991px){
+    /*全部-页脚*/
+    #footer .footer-contact h2{
+        font-size: 26px !important;
+    }
+    /* Safari 7.1+ (9.0 is the latest version of Safari at this time) */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        #footer .footer-contact h2{
+            padding-left: 0;
+            font-size: 22px !important;
+        }
+    }
+    /*全部-页脚*/
+}
+/*平板小屏幕样式 768px <= sm < 992px */
+
+/*大于992px以上固定宽度为970px md >= 992px */
+@media (min-width: 992px){
+    /*全部-最大宽度*/
+    .container {
+        width: 970px;
+    }
+    /*全部-最大宽度*/
+    /*全部-页脚*/
+    #footer .footer-item-last{
+        border-right: 2px solid #c1c1c1;
+    }
+    #footer .footer-contact h2{
+        padding-left: 20px;
+    }
+    /* Safari 7.1+ (9.0 is the latest version of Safari at this time) */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        #footer .footer-contact h2{
+            padding-left: 10px !important;
+        }
+    }
+    /*全部-页脚*/
+}
+/*大于992px以上固定宽度为970px md >= 992px */
+
+
+
+/*全部-导航条样式复写*/
+#header .navbar-default{
+    border:0;
+    margin-bottom: 0;
+    border-bottom: 2px solid #0ba1e4;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    background-color: rgba(255 228 225,0.9);
+}
+#header .navbar-default .navbar-nav>li>a{
+    font-size: 16px;
+    padding: 10px 30px 2px !important;
+}
+#header .navbar-default .navbar-nav>li>a:hover{
+    color: #0ba1e4;
+}
+#header .navbar-default .navbar-nav>.active>a, #header .navbar-default .navbar-nav>.active>a:hover, #header .navbar-default .navbar-nav>.active>a:focus{
+    color:#0ba1e4;
+    background-color: rgba(255,255,255,0);
+}
+#header .navbar-default .navbar-toggle .icon-bar{
+    background-color: none;
+}
+#header .navbar-default .navbar-nav>li .line-top{
+    border-top: 1px solid #0ba1e4;
+    width: 18px;
+    margin: auto;
+}
+/*全部-导航条样式复写*/
+
+
+/*全部-咨询banner*/
+.contact-banner{
+    position: relative;
+    overflow:hidden;
+    padding:0;
+    background:-webkit-linear-gradient(top,#0076d1,#5db8ff);
+    background:-moz-linear-gradient(top,#0076d1,#5db8ff);
+    background:-o-linear-gradient(top,#0076d1,#5db8ff);
+    background:-ms-linear-gradient(top,#0076d1,#5db8ff);
+}
+.contact-banner .waves{
+    position: absolute;
+    height: 100%;
+}
+.contact-banner-box{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.contact-banner-box h2{
+    display: block;
+    max-width: 10em;
+    margin: 0px auto;
+    line-height: 2em;
+    border-bottom: 2px solid #fff;
+    color: #f5f5f5;
+}
+
+.contact-banner-box h4{
+    color: #f1f1f1;
+}
+
+.contact-banner-box .btn{
+    font-size: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 20px;
+}
+/*全部-咨询banner*/
+
+/*全部-页脚footer*/
+#footer{
+    padding: 0;
+    background-color: #363636;
+}
+#footer .footer-item{
+    height: 160px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 1em;
+    border-left: 2px solid #c1c1c1;
+    overflow: hidden;
+
+}
+#footer .footer-list h4{
+    color: #f5f5f5;
+}
+#footer .footer-list ul{
+    margin: 25px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+#footer .footer-list ul li a{
+    color: #f5f5f5;
+    line-height: 2.5em;
+}
+
+#footer .footer-wechat img{
+    max-height: 132px;
+}
+#footer .footer-wechat p{
+    text-align: center;
+    color: #f5f5f5;
+    line-height: 2.5em;
+}
+#footer .footer-contact h2{
+    display: block;
+    color: #ffffff;
+    margin: 0;
+    line-height: 52px;
+}
+#footer .footer-contact h2 img{
+    width: 40px;
+    height: 40px;
+    margin-top: -6px;
+    margin-right: 10px;
+}
+#copyright{background-color: #666;}
+#copyright p{
+    text-align: center;
+    margin: 10px;
+    line-height: 40px;
+    color: #fafafa;
+}
+#copyright p a{
+    color: #fafafa;
+}
+#copyright p a:hover{
+    text-decoration: none;
+}
+/*全部-页脚footer*/
+/*全部-移动端页脚*/
+#mob-bottom{
+    width: 100%;
+    /*max-height: 64px;*/
+    text-align: center;
+    z-index: 1000;
+    background-color: rgba(255,255,255,0.9);
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid #0ba1e4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#mob-bottom .mob-bottom-item a{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    color: #616161;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 12px;
+}
+#mob-bottom .mob-bottom-item a:hover{
+    text-decoration: none;
+}
+#mob-bottom .mob-bottom-item a img{
+    max-width: 28px;
+}
+/*全部-移动端页脚*/
+/*全部-回到顶部*/
+#clan-slider{
+    position: fixed;
+    _position: absolute;
+    bottom: 30%;
+    right: .1%;
+    z-index: 1000;
+}
+#clan-slider ul{
+    margin: 0;
+    padding: 0;
+    margin-top: -2px;
+    list-style: none;
+}
+#clan-slider ul li{
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-top: 2px;
+    position: relative;
+}
+#clan-slider ul li a{
+    display: block;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #0ba1e4;
+    background-color: #f5f5f5;
+    background-image: url("../images/icons/clan-slider.png")/*tpa=http://www.clantrip.com/static/images/icons/clan-slider.png*/;
+    background-repeat: no-repeat;
+}
+
+#slider-chat{
+    background-position: 0 -92px;
+}
+#slider-chat:hover{
+    background-position: -46px -92px;
+    background-color: #0ba1e4;
+}
+#slider-qq{
+    background-position: 0 -138px;
+}
+#slider-qq:hover{
+    background-position: -46px -138px;
+    background-color: #0ba1e4;
+}
+#slider-phone{
+    background-position: 0 -184px;
+}
+#slider-phone:hover{
+    background-position: -46px -184px;
+    background-color: #0ba1e4;
+}
+#slider-wechat{
+    background-position: 0 -230px;
+}
+#slider-wechat:hover{
+    background-position: -46px -230px;
+    background-color: #0ba1e4;
+}
+#slider-goTop{
+    background-position: 0 0;
+}
+#slider-goTop:hover{
+    background-position: -46px 0;
+    background-color: #0ba1e4;
+}
+#clan-slider #slider-menu{
+    background-position: 0 -46px;
+
+    background-color: rgba(255,255,255,0.7);
+    border-color:  rgba(255,255,255,0.7);
+}
+#clan-slider #slider-menu:hover{
+    background-position: -46px -46px;
+}
+#clan-slider .clan-slider-tips{
+    position: absolute;
+    top: 0px;
+    right: 48px;
+    display: none;
+    height: 48px;
+    padding-left: 10px;
+    padding-right: 2px;
+    white-space: nowrap;
+    border: 1px solid #0ba1e4;
+    background-color: #0ba1e4;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+
+}
+#clan-slider .clan-slider-tips-wechat{
+    display: none;
+    position: absolute;
+    background-color: #0ba1e4;
+    padding: 1px;
+    bottom: 0;
+    right: 50px;
+}
+#clan-slider .clan-slider-tips-wechat img{
+    width: 196px;
+    height: 196px;
+}
+/*全部-回到顶部*/
+/**********  所有页面都要共用的样式  **********/
+
+
+
+/**********  首页单独的样式  **********/
+/*首页样式开始*/
+/*首页-行板块*/
+.index-row{
+    padding: 50px 0;
+}
+.index-row .main-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*首页-行板块*/
+
+/*首页-我们的成绩*/
+/*平板小屏幕样式 768px <= sm < 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .our-data .our-data-item .number-wrapper {
+        font-size: 50px !important;
+        line-height: 1.5em !important;
+    }
+}
+.our-data .our-data-item{
+    text-align: center;
+}
+.our-data .our-data-item .number-wrapper{
+    font-family: "Roboto", Arial, Tahoma, sans-serif;
+    font-size: 70px;
+    line-height: 1.5em;
+    color: #0ba1e4;
+}
+.our-data .our-data-item .number-wrapper span{
+    display: inline;
+}
+.our-data .our-data-item .title{
+    color:#919191;
+}
+/*首页-我们的成绩*/
+
+/*首页-我们的优势*/
+.our-whyus{
+    background-color: #e1e1e1;
+}
+
+.our-whyus-item{
+    -webkit-transition: all 0.225s ease-in-out;
+    -moz-transition: all 0.225s ease-in-out;
+    -o-transition: all 0.225s ease-in-out;
+    transition: all 0.225s ease-in-out;
+    text-align: center;
+    background-color: #fafafa;
+    border:1px solid #c1c1c1;
+    padding:10px;
+}
+.our-whyus-item:hover{
+    background-color: #0ba1e4;
+    border:1px solid #0ba1e4;
+    box-shadow: 0 0 20px 0 rgba(45,183,245,.5);
+    color: #fff;
+}
+.our-whyus-item:hover > .glyphicon{
+    color: #fff;
+}
+.our-whyus-item .glyphicon{
+    color: #0ba1e4;
+    font-size: 80px;
+    line-height: 1.5em;
+}
+.our-whyus-item h3{
+    line-height: 1.5em;
+}
+.our-whyus-item p{
+    line-height: 1.5em;
+}
+/*首页-我们的优势*/
+
+/*首页-我们的服务*/
+/*手机超小屏幕下的单独样式 xs < 768px */
+@media (max-width: 767px) {
+    .card-item {
+        width: 100% !important;
+    }
+
+    .card-area .card-active {
+        -webkit-transform: scale(1) !important;
+        -moz-transform: scale(1) !important;;
+        -o-transform: scale(1) !important;;
+        -ms-transform: scale(1) !important;;
+        z-index: 10 !important;
+    }
+}
+.our-service{
+    background-color: #ffffff;
+}
+.card-box{
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.card-area {
+    padding: 0;
+    margin: 0;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+.card-area .card-item{
+    float:left;
+    position:relative;
+    list-style:none;
+    width: 25%;
+    background-color: #fafafa;
+    border:1px solid #c1c1c1;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+}
+.card-area .card-item .card-title{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c1c1c1;
+}
+.card-area .card-item .card-title h4{
+    font-weight: bold;
+    color: #0ba1e4;
+}
+.card-area .card-item .card-title h4,.card-area .card-item .card-title p{
+    margin: 0;
+    line-height: 2em;
+}
+.card-area .card-item .card-content{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.card-area .card-item .card-content p{
+    line-height: 3em;
+}
+.card-area .card-item .card-content a{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.card-area .card-active {
+    background-color: #0ba1e4;
+    border:1px solid #0ba1e4;
+    box-shadow: 0 0 20px 0 rgba(45,183,245,.5);
+    color: #fff;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    z-index: 11;
+}
+.card-area .card-active .card-title{
+    border-color: #ffffff;
+}
+.card-area .card-active .card-title h4{
+    color: #fff;
+}
+/*首页-我们的服务*/
+
+/*首页-客户的鼓励*/
+/*手机超小屏幕下的单独样式 xs < 768px */
+@media (max-width: 767px) {
+    .popover-content {
+        margin: 5% 0 0 !important;
+    }
+}
+.our-example{
+    background-color: #f5f5f5;
+}
+.our-example-box{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.our-example-popover{
+    height: 190px;
+    padding-bottom: 0px;
+}
+.our-example-popover .popover{
+    height: 160px;
+    width: 100%;
+    max-width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    border: 1px solid #34a263;
+    box-shadow: none;
+    z-index: 10;
+
+    position: relative;
+    display: block;
+    float: left;
+    /*width: 260px;*/
+    margin: 0px;
+}
+.popover.top>.arrow {
+    border-top-color: #34a263;
+}
+.popover.top>.arrow:after {
+    border-top-color: #f5f5f5 !important;
+}
+
+.popover-title-touxiang {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: -26px;
+    margin: 0;
+    left: 0;
+    text-align: center;
+}
+.popover-title-touxiang img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    /*border: 1px solid #34a263;*/
+}
+
+.popover-content {
+    margin: 9% 0 0;
+}
+.popover-content-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    font-family: "SourceHanSansCN-Light","Lantinghei SC","Open Sans","Hiragino Sans GB","Microsoft YaHei","STHeiti-Light","WenQuanYi Micro Hei","Arial","SimSun","sans-serif";
+}
+.popover-content-tag {
+    position: absolute;
+    font-size: 12px;
+    bottom: 12px;
+    width: 91%;
+}
+.popover-content-tag .bingzhong {
+    float: left;
+    background-color: #aaa;
+    color: #fff;
+    padding: .5% 3.5%;
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "SourceHanSansCN-Light","Lantinghei SC","Open Sans","Hiragino Sans GB","Microsoft YaHei","STHeiti-Light","WenQuanYi Micro Hei","Arial","SimSun","sans-serif";
+}
+.position-address {
+    max-width: 50%;
+    float: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.position-icon {
+    background-image: url("../images/icons/position-icon.svg")/*tpa=http://www.clantrip.com/static/images/icons/position-icon.svg*/;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 4px;
+}
+.position-address span {
+    color: #aaa;
+    font-family: "SourceHanSansCN-Light","Lantinghei SC","Open Sans","Hiragino Sans GB","Microsoft YaHei","STHeiti-Light","WenQuanYi Micro Hei","Arial","SimSun","sans-serif";
+}
+
+.glly-icon{
+    background-image: url("../images/icons/yhgl-icon.svg")/*tpa=http://www.clantrip.com/static/images/icons/yhgl-icon.svg*/;
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ac-figure-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+/*首页-客户的鼓励*/
+
+/*首页-最新资讯*/
+.our-news{
+    background-color: #ffffff;
+}
+.our-news-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.our-news-item a:hover{
+    text-decoration: none;
+}
+.our-news-item .media-left a{
+    width: 140px;
+    height: 110px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.our-news-item img{
+    object-fit: cover;
+    width: 100%;
+    height: 100px;
+}
+
+.our-news-item .media-body{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.our-news-item h4{
+    color: #0ba1e4;
+    height: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+.our-news-item h4:hover{
+    font-weight: bold;
+}
+
+.our-news-item .dynamic-li {
+    color: #999;
+    padding: 2px 0;
+    font-size: 12px;
+}
+.our-news-item .dynamic-li b {
+    float: right;
+    font-weight: 400;
+    width: 30px;
+}
+.our-news-item .dynamic-li a{
+    float: right;
+    display: inline-block;
+    font-weight: 400;
+    color: #999;
+    margin-right: 10px;
+}
+.our-news-item .dynamic-li a:hover{
+    color: #f93;
+}
+.our-news-item .dynamic-li .pic-glob{
+    float: right;
+    display: inline-block;
+    width: 13px;
+    height: 10px;
+    background-position: -131px -58px;
+    margin: 4px 5px 0 0;
+    background-image: url("../images/icons/glob-pic.png")/*tpa=http://www.clantrip.com/static/images/icons/glob-pic.png*/;
+    background-repeat: no-repeat;
+}
+
+.our-news-item p{
+    color: #919191;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.our-news-more{
+    text-align: center;
+}
+/*首页-最新资讯*/
+
+/*首页-我们的客户*/
+.our-client{
+    background-color: #e1e1e1;
+}
+.our-client-item{
+    overflow:hidden !important;
+}
+.our-client-item .our-client-logo{
+    text-align: center;
+    border: 1px solid #c1c1c1;
+    margin: 20px auto;
+    overflow: hidden;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.our-client-item .our-client-logo:hover{
+    background-color: #fafafa;
+    border:1px solid #0ba1e4;
+    box-shadow: 0 0 10px 0 rgba(45,183,245,.5);
+}
+.our-client-item .our-client-logo:hover img{
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+    filter: none;
+}
+.our-client-item img{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+/*首页-我们的客户*/
+/**********  首页单独的样式  **********/
+
+/********** 所有9:3分页的 sidebar样式  **********/
+/*9:3分隔线*/
+#left-line{
+    display: block;
+    position: absolute;
+    top:0;
+    left: 25%;
+    height: 100%;
+    border-left: 1px solid #c1c1c1;
+}
+
+#right-line{
+    display: block;
+    position: absolute;
+    top:0;
+    right: 25%;
+    height: 100%;
+    border-left: 1px solid #c1c1c1;
+}
+/*9:3分隔线*/
+
+/*签证知识左侧菜单样式*/
+#sidebar{
+    overflow: hidden;
+}
+#sidebar-content{
+    width: 115%;
+    height: 100% !important;
+    overflow-y: scroll;
+}
+#sidebar-content ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#sidebar-content ul li{
+    padding-left:  1em;
+}
+#sidebar-content ul li a{
+    display: block;
+    width: 100%;
+    padding-left:  1em;
+    line-height: 28px;
+    height: 28px;
+    color: #616161;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+#sidebar-content ul li a:hover{
+    color: #0ba1e4;
+    text-decoration: none;
+    cursor: pointer;
+}
+#sidebar-content .left-active{
+    background-color: rgba(194,214,229,.6);
+    color: #0ba1e4;
+}
+#sidebar-content .left-active-sub{
+    color: #0ba1e4;
+}
+#sidebar-content>ul>li>a{
+    color: #0ba1e4;
+}
+#sidebar-content>ul>li>a:hover{
+    background-color: rgba(194,214,229,.6);
+}
+
+/*手机超小屏幕下的单独样式 xs < 768px */
+@media (max-width: 767px){
+    #sidebar{
+        display: none;
+        position: fixed !important;
+        z-index: 1091;
+        top: 0 !important;
+        left: 0 !important;
+        width: 270px !important;
+        height: 100% !important;
+        background-color: #333 !important;
+        overflow-y: scroll !important;
+    }
+
+    #sidebar-content ul li{
+        padding-left: 0;
+    }
+    #sidebar-content ul li a{
+        text-indent: 1em;
+        padding-left:  0 !important;
+        height: 43px !important;
+        padding-top: .5em !important;
+        padding-bottom: .5em !important;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.05) !important;
+        border-top: 1px solid rgba(0,0,0,.3) !important;
+        color: #ccc;
+    }
+    #sidebar-content ul li a:hover{
+        color: #ccc;
+    }
+    #sidebar-content>ul>li>ul>li>a{
+        text-indent: 2em;
+    }
+    #sidebar-content>ul>li>ul>li>ul>li>a{
+        text-indent: 3em;
+    }
+    #sidebar-content .left-active{
+        color: #ccc;
+        background-color: rgba(194,214,229,0);
+    }
+    #sidebar-content .left-active-sub{
+        color: #0ba1e4;
+    }
+    #sidebar #sidebar-content{
+        height: 100% !important;
+    }
+    #sidebar-content>ul>li>a{
+        color: #ccc;
+    }
+    #sidebar-content>ul>li>a:hover{
+        color: #ccc;
+        background-color: rgba(194,214,229,0);
+    }
+}
+/*手机超小屏幕下的单独样式 xs < 768px */
+/*签证知识左侧菜单样式*/
+
+/*右侧sidebar样式*/
+#sidebar-content h4:first-child{
+    padding-top: 0;
+}
+#sidebar-content h4{
+    border-bottom: 1px solid #c1c1c1;
+    margin: 0;
+    padding-top: 30px;
+    *padding-top:expression(this.previousSibling==null?"0":"30px");
+    padding-bottom: 15px;
+}
+#sidebar .sidebar-right ul{
+    margin-top: 15px;
+}
+#sidebar .sidebar-right ul li{
+    padding-left: 0;
+}
+#sidebar .sidebar-right ul li a{
+    color: #333;
+}
+#sidebar .sidebar-right ul li a:hover{
+    background: none;
+    color: #0ba1e4;
+}
+
+.sidebar-contact{
+    padding-left: 7px;
+    padding-top: 15px;
+}
+.sidebar-contact a{
+    display: block;
+    margin: 5px 0;
+    height: 32px;
+    padding-left: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #f93;
+    background-image: url("../images/icons/sidebar-bg.png")/*tpa=http://www.clantrip.com/static/images/icons/sidebar-bg.png*/;
+    background-repeat: no-repeat;
+}
+.sidebar-contact a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+.sidebar-contact a.sidebar-phone:hover{
+    cursor: text;
+}
+.sidebar-contact a.sidebar-qq{
+    background-position: 0 -32px;
+}
+.sidebar-contact a.sidebar-chat{
+    background-position: 0 -64px;
+}
+
+/*手机超小屏幕下的单独样式 xs < 768px */
+@media (max-width: 767px){
+    #sidebar-content h4{
+        border-bottom: 0;
+        background-color: #333;
+        color: #777;
+        line-height: 28px;
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+    #sidebar .sidebar-right ul li a{
+        color: #ccc;
+    }
+}
+/*手机超小屏幕下的单独样式 xs < 768px */
+/*右侧sidebar样式*/
+/********** 所有9:3分页的 sidebar样式  **********/
+
+
+/*所有子页面的中间主体部分*/
+.main-container{
+    margin: 0 0 30px 0;
+}
+/*所有子页面的中间主体部分*/
+
+
+
+
+
+/********** 所有9:3分页的 文章内容article样式  **********/
+.article-title{
+    border-bottom: 1px solid #c1c1c1;
+}
+.article-title h1{
+    display: block;
+    margin: 0 0 10px 0;
+    line-height: 1.5em;
+}
+.article-title h1 small{
+    float: right;
+    line-height: 58px;
+    margin-top: 3px;
+    font-size: 14px;
+}
+.article-content h3:first-child{
+    border-top-style:none;
+}
+.article-content h3{
+    margin: 0;
+    color: #0ba1e4;
+    border-top: 1px solid #c1c1c1;
+    line-height: 1.5em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    *border-top-style:expression(this.previousSibling==null?"none":"solid");
+}
+.article-content h5{
+    font-weight: bold;
+}
+.article-content p{
+    text-indent: 2em;
+    line-height: 2em;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.article-content ul{
+    list-style: circle;
+    padding-left: 2em;
+    margin-left: 1.3em;
+}
+.article-content ol{
+    padding-left: 2em;
+    margin-left: 1.3em;
+}
+.article-content ul li, .article-content ol li{
+    line-height: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-indent: 0;
+}
+.article-content img{
+    margin-bottom: 10px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.article-footer{
+    border-top: 1px solid #c1c1c1;
+}
+
+
+.news-article .article-content img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.news-list .article-footer{
+    text-align: center;
+    border-top: 0;
+}
+
+.news-list .our-news-item{
+    margin: 0;
+    border-bottom: 1px solid #c1c1c1;
+}
+.news-list .our-news-item .media-left {
+
+}
+/********** 所有9:3分页的 文章内容article样式  **********/
+
+
+/********** 签证产品列表页样式  **********/
+.service-item dd{
+    height: 164px;
+    padding-left: 144px;/*背景图片宽度124px*/
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.service-item .service-item-title{
+    color: #333;
+}
+.service-item .service-item-title:hover{
+    color: #0ba1e4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.service-item h3{
+    margin: 0;
+    line-height: 1.5em;
+    border-bottom: 1px dashed #c1c1c1;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+.service-item p{
+    margin: 0;
+    line-height: 2em;
+}
+.service-item p>span{
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 20px;
+
+}
+.star {
+
+    color: #ddd;
+}
+.star i {
+    color: #f90;
+    font-style: normal !important;
+}
+
+.service-item .btn{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: #f93;
+    border-color: #f93;
+}
+.service-item .btn:hover{
+    background-color: #f93;
+    color: #fff;
+}
+.service-item .quancheng{
+    background-image: url("../images/quancheng.png")/*tpa=http://www.clantrip.com/static/images/quancheng.png*/;
+    background-repeat: no-repeat;
+}
+.service-item .liucheng{
+    background-image: url("../images/liucheng.png")/*tpa=http://www.clantrip.com/static/images/liucheng.png*/;
+    background-repeat: no-repeat;
+}
+.service-item .zhoubian{
+    background-image: url("../images/zhoubian.png")/*tpa=http://www.clantrip.com/static/images/zhoubian.png*/;
+    background-repeat: no-repeat;
+}
+
+/*手机超小屏幕下的单独样式 xs < 768px */
+@media (max-width: 767px){
+    .service-item{
+        padding-top: 10px;
+    }
+    .service-item dd{
+        height: 82px;
+        padding-left: 72px;/*背景图片宽度124px*/
+        position: relative;
+        overflow: hidden;
+        -moz-background-size: 62px 82px;
+        -webkit-background-size: 62px 82px;
+        background-size: 62px 82px;
+    }
+    .service-item h3{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .service-item p{
+        margin: 0;
+        line-height: 1.5em;
+    }
+    .service-item p>span{
+        margin-right: 10px;
+    }
+
+    .service-item .btn{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+}
+/*手机超小屏幕下的单独样式 xs < 768px */
+/********** 签证产品列表页样式  **********/
+
+/********** 签证产品详细页样式  **********/
+.service-info h1{
+    margin: 0;
+}
+.service-info table{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #0ba1e4;
+    border: 10px solid #0ba1e4;
+    box-shadow: 0 0 20px 0 rgba(45,183,245,.5);
+}
+.service-info table th, .service-info table td{
+    text-align: center;
+    line-height: 2em;
+    color: #fff;
+}
+.service-info table th{
+    font-weight: normal;
+    color: #f1f1f1;
+}
+.service-info .btn{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    color: #f93;
+    border-color: #f93;
+}
+.service-info .btn:hover{
+    background-color: #f93;
+    color: #fff;
+}
+
+
+.service-info blockquote {
+    margin-bottom: 30px;
+    padding-right: 0;
+    padding-bottom: 0;
+    background:#f9f9f9;
+    color: #919191;
+    font-size: 14px;
+    background-image: url("../images/icons/quote-left.png")/*tpa=http://www.clantrip.com/static/images/icons/quote-left.png*/;
+    background-position: top left;
+    background-repeat: no-repeat;
+    text-indent: 2em;
+}
+
+.service-info blockquote p {
+    padding-right: 20px;
+    padding-bottom: 10px;
+    line-height: 2em;
+    background-image: url("../images/icons/quote-right.png")/*tpa=http://www.clantrip.com/static/images/icons/quote-right.png*/;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.visa-detail h2{
+    border-bottom: 1px solid #c1c1c1;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    position: relative;
+}
+.visa-detail h2 strong{
+    border-bottom: 2px solid #0ba1e4;
+    position: absolute;
+    bottom: -1px;
+}
+
+
+.visa-step .caption{
+    text-align: center;
+    padding: 0;
+    padding-top: 4px;
+}
+.visa-step .thumbnail{
+    position: relative;
+}
+.visa-step .caption h5{
+    display: block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin: 0;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #0ba1e4;
+    border-radius: 50%;
+}
+.visa-step .caption p{
+    margin: 0;
+}
+
+
+
+.doc-list{
+    margin-bottom: 20px;
+}
+.doc-list .tab-pane{
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.doc-list .table{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0;
+}
+.doc-list .table caption{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.doc-list .table caption .label{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5em;
+}
+
+.doc-list .doc-name{
+    width: 25%;
+    font-weight: bold;
+}
+.doc-list .doc-description ul{
+    margin: 0;
+    padding-left: 0;
+
+}
+.doc-list .doc-description ul li{
+    list-style-type: circle;
+}
+.doc-list .doc-sample{
+    width: 55px;
+    text-align: center;
+}
+
+.visa-notice ol{
+    margin: 0;
+    padding: 0 1em 1em 2em;
+}
+.visa-notice ol li{
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    list-style: square;
+}
+
+
+@media (max-width: 767px){
+    .service-info h1{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .visa-step .caption p{
+        font-size: 12px;
+    }
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+        border-bottom-color: #ddd;
+    }
+    .nav-tabs>li>a{
+        border-radius: 4px;
+    }
+}
+/********** 签证产品详细页样式  **********/
+
+
+/********** 资料下载列表页样式  **********/
+
+.download-item{
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.download-item .media-left{
+    padding-right: 20px;
+}
+
+.download-item .media-left a img{
+    width: 42px;
+    height: 48px;
+}
+
+.download-item .media-body .download-title{
+    color: #333;
+}
+.download-item .media-body .download-title:hover{
+    text-decoration: none;
+    color: #0ba1e4;
+}
+
+.download-item .media-body h4{
+    margin-bottom: 14px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.download-item .media-body p{
+    color: #666;
+    font-size: 12px;
+    line-height: 2em;
+}
+
+.download-list .article-footer{
+    text-align: center;
+    border-top: 0;
+}
+
+.download-lable{
+    padding-right: 80px;
+}
+
+.download-lable label:last-child{
+    margin-right: 0;
+}
+
+.download-lable label{
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 6px;
+    * margin-right:expression(this.nextSibling==null?"0":"20px");
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+}
+
+
+
+.download-lable label span{
+    color: #888;
+}
+.download-lable label em{
+    font-style: normal;
+}
+
+.download-list .btn{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+/********** 资料下载列表页样式  **********/
+
+
+/********** 美国加急着陆页样式  **********/
+.urgent-row{
+    padding: 50px 0;
+}
+
+.urgent-row img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.urgent-row h2{
+    margin-top: 60px;
+    color: #0ba1e4;
+}
+.urgent-row .line-big{
+    margin: 0 0 10px 0;
+}
+.urgent-row p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #919191;
+}
+
+
+.urgent-odd{
+    background-color: #f8fbff;
+}
+.urgent-even{
+    background-color: #fff;
+    text-align: right;
+}
+.urgent-even p{
+    float: right;
+}
+
+.urgent-step{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #0ba1e4;
+}
+.urgent-step h3{
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.urgent-chat{
+    background-image: url("../images/urgent_chat.jpg")/*tpa=http://www.clantrip.com/static/images/urgent_chat.jpg*/;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.urgent-chat h1{
+    margin-top: 10px;
+    font-weight: 300;
+}
+.urgent-chat p{
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.urgent-chat ol{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.urgent-chat ol li{
+    font-size: 18px;
+    line-height: 2em;
+    font-weight: 300;
+}
+.urgent-chat .btn{
+    margin-bottom: 10px;
+    width: 120px;
+}
+
+/*手机超小屏幕下的单独样式 xs < 768px */
+@media (max-width: 767px){
+    .urgent-row{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .urgent-row h2 {
+        margin-top: 0px;
+        font-size: 16px;
+    }
+    .urgent-row p{
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5em;
+        color: #919191;
+    }
+
+    .urgent-chat{
+        background-position: -600px -80px;
+    }
+    .urgent-step h3{
+        font-size: 12px;
+    }
+    .urgent-chat p{
+        font-size: 12px;
+    }
+    .urgent-chat ol li{
+        font-size: 12px;
+        line-height: 2em;
+    }
+}
+/*手机超小屏幕下的单独样式 xs < 768px */
+/*平板小屏幕样式 768px <= sm < 992px */
+@media (min-width: 768px) and (max-width: 991px){
+    .urgent-row h2 {
+        margin-top: 50px;
+    }
+    .urgent-chat{
+        background-position: -400px 0;
+    }
+    .urgent-step h3{
+        font-size: 18px;
+    }
+}
+/*平板小屏幕样式 768px <= sm < 992px */
+
+/********** 美国加急着陆页样式  **********/
+
